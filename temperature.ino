@@ -3,7 +3,7 @@ void setup() {
 Serial.begin(9600); 
 }
 
-void loop()       //main loop
+void loop()       
 
 {
 int analogValue = analogRead(outputpin);
