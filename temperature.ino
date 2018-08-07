@@ -1,5 +1,4 @@
 int outputpin= A0;
-//this sets the ground pin to LOW and the input voltage pin to high
 void setup() {
 Serial.begin(9600); 
 }
@@ -13,7 +12,6 @@ float celsius = millivolts/10;
 Serial.print("in DegreeC=   ");
 Serial.println(celsius);
 
-//---------- Here is the calculation for Fahrenheit ----------//
 
 float fahrenheit = ((celsius * 9)/5 + 32);
 Serial.print(" in Farenheit=   ");
