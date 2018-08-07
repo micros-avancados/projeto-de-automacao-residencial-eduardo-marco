@@ -1,5 +1,4 @@
 int outputpin= A0;
-//this sets the ground pin to LOW and the input voltage pin to high
 void setup() {
 Serial.begin(9600); 
 }
