@@ -1,5 +1,4 @@
 #include <ESP8266WiFi.h>         
-
 #include <ESP8266WebServer.h>
 #include <DNSServer.h>
 #include <WiFiManager.h>  
@@ -63,7 +62,7 @@ void loop() {
     while (!client.connected()) {
       Serial.println("Connecting to MQTT...");
  
-      if (client.connect("ESP8266Client", mqttUser, mqttPassword )) {
+      if (client.connect("TempSensor", mqttUser, mqttPassword )) {
  
         Serial.println("connected");  
  
