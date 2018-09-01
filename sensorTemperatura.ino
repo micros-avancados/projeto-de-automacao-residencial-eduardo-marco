@@ -1,3 +1,11 @@
+/*
+Projeto 01 - NodeMCU ESP8266
+Sistemas Microprocessados Avançados 2018/B
+Integrantes: Eduardo Poletto e Marco Antônio Arnhold
+
+Módulo Sensor de Temperatura
+*/
+
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <DNSServer.h>

@@ -1,3 +1,11 @@
+/*
+Projeto 01 - NodeMCU ESP8266
+Sistemas Microprocessados Avançados 2018/B
+Integrantes: Eduardo Poletto e Marco Antônio Arnhold
+
+Módulo Controle do Ar-Condicionado
+*/
+
 #include <IRrecv.h>
 #include <IRsend.h>
 #include <IRtimer.h>
