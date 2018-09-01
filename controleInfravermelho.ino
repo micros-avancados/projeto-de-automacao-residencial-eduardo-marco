@@ -3,7 +3,7 @@ Projeto 01 - NodeMCU ESP8266
 Sistemas Microprocessados Avançados 2018/B
 Integrantes: Eduardo Poletto e Marco Antônio Arnhold
 
-Módulo Controle do Ar-Condicionado
+Módulo Controle Infravermelho de Ar-Condicionado
 */
 
 #include <IRrecv.h>
@@ -76,7 +76,7 @@ void loop()
 
     wifiManager.resetSettings(); //reseta configs da wi-fi
 
-    if (!wifiManager.startConfigPortal("MicrosTeste")) 
+    if (!wifiManager.startConfigPortal("MicrosTeste Infrared")) 
     {
       Serial.println("Falha na conexão");
       delay(3000);
@@ -113,7 +113,7 @@ void loop()
     }
   }
 
-  delay(1000);
+  delay(2000);
 
   if (client.loop()) //testa se esta conectado ao servidor MQTT e entra no loop
   {
@@ -134,13 +134,13 @@ void loop()
       delay(2000);
     }
   }
-  if (temp < 25) //desliga o ar-condicionado se a temperatura for menor que 25 graus Celsius
+  if (temp < 28) //desliga o ar-condicionado se a temperatura for menor que 25 graus Celsius
   {
     irsend.sendRaw(desliga, sizeof(desliga) / sizeof(desliga[0]), frequencia);
     Serial.println("Comando enviado: Desliga");
     delay(2000);
   }
-  else if (temp > 25) //liga o ar-condicionado se a temperatura for maior do que 25 graus Celsius
+  else if (temp > 29) //liga o ar-condicionado se a temperatura for maior do que 25 graus Celsius
   {
     irsend.sendRaw(liga, sizeof(liga) / sizeof(liga[0]), frequencia);
     Serial.println("Comando enviado: Liga");
